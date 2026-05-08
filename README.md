@@ -17,3 +17,7 @@
 ## Captura de las líneas modificadas en el archivo sshd_config.
 
 ![alt text](image-2.png)
+
+## Reflexion final
+
+Creo que SSH es más utilizado en servidores de producción que RDP porque consume menos recursos, es más seguro y permite administrar servidores de forma remota mediante línea de comandos rapidos y eficiente. Además, SSH funciona muy bien en entornos Linux.
