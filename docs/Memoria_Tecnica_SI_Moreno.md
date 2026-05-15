@@ -8,7 +8,7 @@
 
 Nombre:Lucas Moreno Bravo  
 Módulo:Desarrollo de Aplicaciones Multiplataformas  
-Fecha:15/05/2026
+Fecha:15/05/ 2026
 
 **Indice**
 
