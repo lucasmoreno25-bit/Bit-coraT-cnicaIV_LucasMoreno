@@ -1,0 +1,79 @@
+# Laboratorio de Sistemas Informáticos - Bitácora 3
+# Este archivo levanta dos servicios:
+# 1. Un servidor SSH
+# 2. Un entorno gráfico XFCE accesible por RDP y navegador web
+
+version: '3.8'
+
+services:
+
+  # =========================
+  # SERVIDOR SSH
+  # =========================
+  servidor_ssh:
+
+    # Imagen Docker basada en OpenSSH
+    image: linuxserver/openssh-server:latest
+
+    # Nombre del contenedor
+    container_name: lab_ssh_servidor
+
+    # Variables de entorno
+    environment:
+
+      # ID del usuario del sistema anfitrión
+      - PUID=1000
+      # ID del grupo del sistema anfitrión
+      - PGID=1000
+      # Zona horaria
+      - TZ=Europe/Madrid
+      # Usuario SSH que se creará
+      - USER_NAME=alumno
+      # Contraseña del usuario
+      - USER_PASSWORD=sistemas_informaticos
+      # Permitir acceso por contraseña
+      - PASSWORD_ACCESS=true
+
+    # Puertos
+    ports:
+
+      # Puerto local 2222 → puerto 2222 del contenedor
+      - "2222:2222"
+
+    # Reiniciar automáticamente excepto si se detiene manualmente
+    restart: unless-stopped
+
+
+  # =========================
+  # SERVIDOR GRÁFICO XFCE
+  # =========================
+  servidor_rdp:
+
+    # Imagen Ubuntu con escritorio XFCE
+    image: linuxserver/webtop:ubuntu-xfce
+
+    # Nombre del contenedor
+    container_name: lab_rdp_servidor
+
+    # Variables de entorno
+    environment:
+
+      # ID del usuario
+      - PUID=1000
+      # ID del grupo
+      - PGID=1000
+      # Zona horaria
+      - TZ=Europe/Madrid
+    # Puertos expuestos
+    ports:
+
+      # Puerto RDP
+      - "3389:3389"
+      # Acceso web vía navegador
+      - "3000:3000"
+
+    # Memoria compartida para evitar cuelgues del entorno gráfico
+    shm_size: "1gb"
+
+    # Reinicio automático
+    restart: unless-stopped
