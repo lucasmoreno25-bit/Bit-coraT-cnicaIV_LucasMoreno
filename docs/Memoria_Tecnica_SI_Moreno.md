@@ -11,17 +11,11 @@ Módulo:Desarrollo de Aplicaciones Multiplataformas
 Fecha:15/05/2026
 
 [**Introducción	3**](#introducción)
-
 [**1\. Problemáticas de negocio resueltas por la solución	3**](#1.-problemáticas-de-negocio-resueltas-por-la-solución)
-
 [Centralización y homogeneidad del acceso:	3](#centralización-y-homogeneidad-del-acceso:)
-
 [Con la implementación de Ahorro drástico de recursos (Eficiencia Operativa):	3](#con-la-implementación-de-ahorro-drástico-de-recursos-\(eficiencia-operativa\):)
-
 [**2\. Razones de la exclusión de conexiones directas por RDP a cada máquina	3**](#2.-razones-de-la-exclusión-de-conexiones-directas-por-rdp-a-cada-máquina)
-
 [Superficie de ataque crítica:	4](#superficie-de-ataque-crítica:)
-
 [Dependencias y fragmentación en el cliente final:	4](#dependencias-y-fragmentación-en-el-cliente-final:)
 
 # Introducción {#introducción}
