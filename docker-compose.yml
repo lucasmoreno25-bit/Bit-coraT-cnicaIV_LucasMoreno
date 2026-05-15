@@ -1,4 +1,5 @@
 # Laboratorio de Sistemas Informáticos - Bitácora 3
+
 # Este archivo levanta dos servicios:
 # 1. Un servidor SSH
 # 2. Un entorno gráfico XFCE accesible por RDP y navegador web

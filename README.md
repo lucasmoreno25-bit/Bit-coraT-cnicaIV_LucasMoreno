@@ -2,3 +2,28 @@
 Al tener el servidor configurado, debemos ir a la taerminal de vs y escribir ssh alumno@localhost -p 2222. 
 Problema 1: ssh alumno@localhost -p 2222 este no funciona debes escribir localhost@127.0.0.1
 ![alt text](image.png)
+
+## Bit-coraT-cnicalIV_LucasMoreno
+
+1º El primer error es a la hora de poner la ip en el terminal de visual "ssh alumno@localhost -p 2222" en lugar de @localhost es @127.0.0.1
+
+2º A la hora de copiar la llave debo entrar en alumno@127.0.0.1 y poner este comando()
+
+3º A la hora de crear la llave me seguia pidiendo la contraseña, y era porque no le di permisos al archivo en donde lo cree, entonces puse este comando "chmod 600 ~/.ssh/authorized_keys"
+
+## Captura de la conexión SSH sin contraseña.
+
+![alt text](image.png)
+
+## Fondo del escritorio remoto
+
+![alt text](image-1.png)
+
+## Captura de las líneas modificadas en el archivo sshd_config.
+
+![alt text](image-2.png)
+
+## Reflexion final
+
+Creo que SSH es más utilizado en servidores de producción que RDP porque consume menos recursos, es más seguro y permite administrar servidores de forma remota mediante línea de comandos rapidos y eficiente. Además, SSH funciona muy bien en entornos Linux.
+
